@@ -4,6 +4,7 @@ from Settings import *  # Import game settings and constants
 from player import Player   # Import Player class for player character
 from level1 import Level1       # Import Level1 class for the first level
 from level2 import Level2   # Import Level2 class for the second level
+from hazards import OilSlick, FireHazard  # Import hazard classes
 
 class Game:
     """Main game class to manage game states and levels."""
