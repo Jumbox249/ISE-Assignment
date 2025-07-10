@@ -1,9 +1,9 @@
-import pygame
-import sys
-from settings import *
-from player import Player
-from level1 import Level1
-from level2 import Level2
+import pygame   # Import Pygame for game development
+import sys  # Import sys for system exit
+from Settings import *  # Import game settings and constants
+from player import Player   # Import Player class for player character
+from level1 import Level1       # Import Level1 class for the first level
+from level2 import Level2   # Import Level2 class for the second level
 
 class Game:
     """Main game class to manage game states and levels."""
@@ -27,10 +27,10 @@ class Game:
         """Loads the current level based on the index."""
         if self.current_level_index < len(self.levels):
             level_info = self.levels[self.current_level_index]
-            print(f"Loading {level_info[\"name\"]}...")
-            self.current_level = level_info[\"class\"]()
+            print(f"Loading {level_info['name']}...")
+            self.current_level = level_info["class"]()
             self.current_level.init_level()
-            self.player = Player(level_info[\"start_pos\"])
+            self.player = Player(level_info["start_pos"])
             # TODO: Play level transition sound effect or display a transition screen
         else:
             print("All levels completed! Game Over.")
@@ -106,6 +106,6 @@ class Game:
 - Add visual effects for hazard interactions.
 """
 
-if __name__ == \"__main__\":
+if __name__ == "__main__":
     game = Game()
     game.run()
